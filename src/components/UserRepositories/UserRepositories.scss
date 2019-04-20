@@ -1,0 +1,55 @@
+@import "../../styles/variables";
+.repositories {
+  margin-top: 20px;
+  padding: 0 2rem;
+  &__button {
+    margin-bottom: 2rem;
+    min-width: 150px;
+  }
+  &__filter{
+    margin-bottom: 2rem;
+    position: relative;
+    .filter__container {
+      position: relative;
+      &__input {
+        padding-right: 30px;
+      }
+      &__icon {
+        color: $icon_color;
+        display: block;
+        height: 100%;
+        opacity: 0.5;
+        padding: 7px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+  &__table {
+    thead {
+      th {
+        cursor: pointer;
+        font-family: $poppins;
+      }
+    }
+    tbody {
+      td {
+        .message {
+          font-family: $poppins;
+          font-weight: 700;
+          font-size: 2rem;
+          text-align: center;
+        }
+        .messageIcon {
+          text-align: center;
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+  &__pagination{
+    display: flex;
+    justify-content: center;
+  }
+}

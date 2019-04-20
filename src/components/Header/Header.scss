@@ -1,0 +1,62 @@
+@import "../../styles/variables";
+
+.header {
+  border: 1px solid $border_header;
+  box-shadow: 0 3px 8px 0 rgba(116,129,141,.1);
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 100%;
+  justify-content: space-around;
+  height: 100px;
+  &__image {
+    height: 100%;
+    order: 1; 
+    padding: 10px;
+    text-align: center;
+  }
+  &__userInfo{
+    order: 2; 
+    padding-top: 5px;
+    text-align: center;
+    &__title {
+      font-family: $poppins;
+      font-weight: 700;
+      margin: 0;
+      text-transform: capitalize;
+    }
+    &__subtitle {
+      font-family: $poppins;
+      margin-bottom: 5px;
+      &:not(.email){
+        text-transform: capitalize;
+      }
+    }
+    &__Details {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      p {
+        &:first-child {
+          &:after {
+            content: '-';
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: auto;
+    &__image {
+      height: 100px;
+    }
+    &__userInfo{
+      &__Details {
+        flex-direction: column;
+      }
+    }
+  }
+}
